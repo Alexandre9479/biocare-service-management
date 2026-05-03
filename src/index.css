@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-1.5 h-1.5;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-600;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-slate-800/60 border border-slate-700/50 rounded-xl backdrop-blur-sm;
+  }
+
+  .card-hover {
+    @apply hover:border-slate-600/50 hover:bg-slate-800/80 transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-biocare-purple-500 hover:bg-biocare-purple-600
+           text-white font-medium rounded-lg transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-biocare-purple-500 focus:ring-offset-2
+           focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600
+           text-slate-200 font-medium rounded-lg transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2
+           focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-cyan {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-biocare-cyan-500 hover:bg-biocare-cyan-600
+           text-white font-medium rounded-lg transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-biocare-cyan-500 focus:ring-offset-2
+           focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700
+           text-white font-medium rounded-lg transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2
+           focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 bg-slate-900 border border-slate-700 text-slate-100
+           rounded-lg placeholder-slate-500 focus:outline-none focus:ring-2
+           focus:ring-biocare-purple-500 focus:border-transparent transition-all duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-slate-300 mb-1.5;
+  }
+
+  .stat-card {
+    @apply card p-5 flex flex-col gap-2;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold text-slate-100;
+  }
+
+  .page-title {
+    @apply text-2xl font-bold text-slate-50;
+  }
+
+  .table-header {
+    @apply text-xs font-semibold text-slate-400 uppercase tracking-wider;
+  }
+
+  .table-cell {
+    @apply text-sm text-slate-300 py-3 px-4;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium
+           text-slate-400 hover:text-slate-100 hover:bg-slate-800/80
+           transition-all duration-200 cursor-pointer;
+  }
+
+  .nav-item-active {
+    @apply bg-biocare-purple-500/20 text-biocare-purple-400 border border-biocare-purple-500/30;
+  }
+}
+
+@layer utilities {
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(123, 45, 139, 0.3);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 172, 193, 0.3);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-biocare-purple-400 to-biocare-cyan-400;
+  }
+}
